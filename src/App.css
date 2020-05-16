@@ -1,41 +1,75 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Quattrocento&display=swap");
 
+:root {
+  --color--light: #f3a712;
+  --color--dark: #171738;
+  --color--mid: #ff686b;
+  --color--lightest: #f5f5f5;
+  --color--bright: #49beaa;
+  --color--mute: #456990;
+  --font--title: "Abril Fatface", cursive;
+  --font--content: "Quattrocento", serif;
+}
+
+body {
+  text-align: center;
+  background-color: var(--color--lightest);
+  width: 100vw;
+  height: 100vh;
+}
+
 .app {
   text-align: center;
+  background-color: var(--color--lightest);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.link__white {
-  text-decoration: none;
-  color: #ffffff;
+.content {
+  max-width: 80vw;
 }
 
-.link__white:visited {
+.link__light {
   text-decoration: none;
-  color: #ffffff;
+  color: var(--color--light);
+}
+
+.link__light:visited {
+  text-decoration: none;
+  color: var(--color--light);
 }
 
 .app-header {
   position: sticky;
   top: 0;
-  background-color: #cc8fab;
+  background-color: var(--color--mid);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
-  font-family: "Abril Fatface", cursive;
+  color: var(--color--light);
+  font-family: var(--font--title);
 }
 
 .app-navbar {
-  background-color: #f2b8c6;
+  background-color: var(--color--dark);
   width: 100vw;
+}
+
+.app-footer {
+  background-color: var(--color--dark);
+  width: 100vw;
+  color: var(--color--light);
+  font-family: var(--font--title);
 }
 
 .navbar-list {
   margin: 0px;
   padding: 0px;
-  background-color: #f2b8c6;
+  background-color: var(--color--dark);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -43,7 +77,7 @@
   list-style-type: none;
   font-size: calc(10px + 1vmin);
   color: white;
-  font-family: "Abril Fatface", cursive;
+  font-family: var(--font--title);
 }
 
 .navbar-list-item {
@@ -51,9 +85,14 @@
 }
 
 .page__header {
-  font-family: "Abril Fatface", cursive;
-  color: #cc8fab;
+  font-family: var(--font--title);
+  color: var(--color--mid);
   font-size: calc(10px + 2vmin);
+}
+
+.page__content {
+  font-family: var(--font--content);
+  font-size: calc(8px + 1vmin);
 }
 
 .blog__list {
@@ -69,19 +108,34 @@
 .blog__list__item {
   margin: 20px;
   padding: 20px;
-  border: 2px solid #cc8fab;
+  border: 2px solid var(--color--mid);
   text-align: left;
 }
 
 .blog__list__item__title {
-  font-family: "Abril Fatface", cursive;
-  color: #cc8fab;
+  font-family: var(--font--title);
+  color: var(--color--bright);
   font-size: calc(10px + 1vmin);
 }
 
 .blog__list__item__content {
-  font-family: "Quattrocento", serif;
+  font-family: var(--font--content);
   font-size: calc(8px + 1vmin);
+}
+
+.author__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.author__list__item {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  font-family: var(--font--title);
 }
 
 /* loading */
@@ -99,10 +153,10 @@
   width: 64px;
   height: 64px;
   margin: 8px;
-  border: 8px solid #cc8fab;
+  border: 8px solid var(--color--mid);
   border-radius: 50%;
   animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: #cc8fab transparent transparent transparent;
+  border-color: var(--color--mid) transparent transparent transparent;
 }
 .lds-ring div:nth-child(1) {
   animation-delay: -0.45s;

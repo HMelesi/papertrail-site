@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 
-export default class Author extends Component {
+export default class BlogPost extends Component {
   render() {
-    const { author } = this.props;
+    const { title } = this.props;
     return (
       <div>
-        <h2 className="page__header">on the page of {author}</h2>
+        <h2 className="page__header">{title}</h2>
         <p className="page__content">
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem
           accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
@@ -21,12 +21,6 @@ export default class Author extends Component {
           ea voluptate velit esse quam nihil molestiae consequatur, vel illum
           qui dolorem eum fugiat quo voluptas nulla pariatur?
         </p>
-        <h2 className="page__header">most recent posts by {author}</h2>
-        <ul className="blog__list">
-          <li className="blog__list__item">first post</li>
-          <li className="blog__list__item">second post</li>
-          <li className="blog__list__item">third post</li>
-        </ul>
       </div>
     );
   }

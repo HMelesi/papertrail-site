@@ -3,7 +3,7 @@ import BlogCard from "./BlogCard";
 import * as api from "../utils/api";
 import Loading from "./Loading";
 
-const Blog = () => {
+const BlogList = () => {
   const [blogs, setBlogs] = useState([]);
   const [isLoading, setLoading] = useState(true);
   const [sort_by, setSortBy] = useState("created_at");
@@ -48,4 +48,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default BlogList;
