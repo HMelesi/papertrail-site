@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "@reach/router";
+import Navbar from "./Navbar";
 
 export default class Header extends Component {
   render() {
@@ -8,6 +9,7 @@ export default class Header extends Component {
         <Link className="link__white" to="/">
           <h1>papertrail</h1>
         </Link>
+        <Navbar />
       </header>
     );
   }

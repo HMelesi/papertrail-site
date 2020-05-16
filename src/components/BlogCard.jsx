@@ -1,13 +1,11 @@
 import React, { Component } from "react";
-import InstaFeed from "./InstaFeed";
 
-export default class Homepage extends Component {
+export default class BlogCard extends Component {
   render() {
     return (
-      <div>
-        <h2>this is the Homepage!!</h2>
-        <h3>latest post</h3>
-        <p>
+      <li className="blog__list__item">
+        <h2 className="blog__list__item__title">{this.props.title}</h2>
+        <p className="blog__list__item__content">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam cursus
           diam et facilisis ultrices. Pellentesque fringilla pellentesque
           vulputate. Pellentesque nec consequat neque, nec fringilla est.
@@ -17,9 +15,7 @@ export default class Homepage extends Component {
           Vivamus quis orci sit amet est congue pellentesque id ut massa.
           Integer lobortis cursus semper.
         </p>
-        <h3>maybe a social media feed</h3>
-        <InstaFeed />
-      </div>
+      </li>
     );
   }
 }

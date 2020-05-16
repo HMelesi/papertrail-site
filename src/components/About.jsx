@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import EEAL from "../images/EEAL.png";
+import FIP from "../images/FIP.png";
 
 export default class About extends Component {
   render() {
@@ -26,6 +28,10 @@ export default class About extends Component {
           Vivamus quis orci sit amet est congue pellentesque id ut massa.
           Integer lobortis cursus semper.
         </p>
+        <div>
+          <img src={EEAL} alt="lizzie lester" height="300px" />
+          <img src={FIP} alt="frances pickworth" height="300px" />
+        </div>
         <h2>about chipie</h2>
         <p>She is awesome.</p>
       </div>
