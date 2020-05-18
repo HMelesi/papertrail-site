@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Quattrocento&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quattrocento&family=Sansita:wght@800&display=swap");
 
 :root {
   --color--light: #f3a712;
@@ -7,7 +7,7 @@
   --color--lightest: #f5f5f5;
   --color--bright: #49beaa;
   --color--mute: #456990;
-  --font--title: "Abril Fatface", cursive;
+  --font--title: "Sansita", sans-serif;
   --font--content: "Quattrocento", serif;
 }
 
@@ -56,6 +56,9 @@ body {
   background-color: var(--color--lightest);
   color: var(--color--mid);
   border: none;
+  font-size: calc(10px + 2vmin);
+  height: 10px;
+  width: 50px;
 }
 
 .button--arrow:disabled {
@@ -64,10 +67,17 @@ body {
   border: none;
 }
 
+.page__buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 .app-header {
   position: sticky;
   top: 0;
-  background-color: var(--color--mid);
+  background-color: var(--color--mute);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -87,6 +97,12 @@ body {
   width: 100vw;
   color: var(--color--light);
   font-family: var(--font--title);
+}
+
+.header__logo {
+  max-height: 10%;
+  max-width: 35%;
+  margin-top: 10px;
 }
 
 .navbar-list {
@@ -120,6 +136,44 @@ body {
 }
 
 .page__content {
+  font-family: var(--font--content);
+  font-size: calc(8px + 1vmin);
+}
+
+.page__sort {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+
+.page__sort__title {
+  font-family: var(--font--title);
+  color: var(--color--mute);
+  font-size: calc(2px + 2vmin);
+}
+
+.page__sort__choice {
+  font-family: var(--font--content);
+  color: var(--color--mute);
+  font-size: calc(4px + 1vmin);
+  border: none;
+}
+
+.blog__feature {
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid var(--color--light);
+  text-align: left;
+}
+
+.blog__feature__title {
+  font-family: var(--font--title);
+  color: var(--color--mid);
+  font-size: calc(10px + 1vmin);
+}
+
+.blog__feature__content {
   font-family: var(--font--content);
   font-size: calc(8px + 1vmin);
 }

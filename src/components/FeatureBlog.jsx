@@ -4,7 +4,7 @@ export default class FeatureBlog extends Component {
   render() {
     return (
       <div className="blog__feature">
-        <h3 className="blog__feature__title">latest blog</h3>
+        <h3 className="blog__feature__title">latest blog title</h3>
         <p className="blog__feature__content">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam cursus
           diam et facilisis ultrices. Pellentesque fringilla pellentesque

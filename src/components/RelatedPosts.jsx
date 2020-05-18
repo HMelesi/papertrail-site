@@ -21,6 +21,8 @@ const RelatedPosts = ({ _topic, _author }) => {
       fetchBlogs(_topic, author, sort_by, order, limit, p);
     } else if (_author) {
       fetchBlogs(topic, _author, sort_by, order, limit, p);
+    } else {
+      fetchBlogs(topic, author, sort_by, order, limit, p);
     }
   }, [topic, p, sort_by, author, limit, order]);
 
@@ -53,25 +55,27 @@ const RelatedPosts = ({ _topic, _author }) => {
   return (
     <div>
       <h3 className="page__subheader">
-        {_topic ? <p>related posts</p> : <p>more posts by this author</p>}
+        {_topic ? (
+          <p>related posts</p>
+        ) : _author ? (
+          <p>more posts by this author</p>
+        ) : (
+          <p>most recent posts</p>
+        )}
       </h3>
       <button
         className="button--arrow"
         onClick={() => arrowClick(-1)}
         disabled={p * limit <= 2}
       >
-        <h2>
-          <TiChevronLeft />
-        </h2>
+        <TiChevronLeft />
       </button>
       <button
         className="button--arrow"
         onClick={() => arrowClick(1)}
         disabled={p * limit >= totalArticles}
       >
-        <h2>
-          <TiChevronRight />
-        </h2>
+        <TiChevronRight />
       </button>
 
       <ul className="blog__tilelist">
