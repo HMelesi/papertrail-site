@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import { Router } from "@reach/router";
 import Homepage from "./components/Homepage.jsx";
@@ -12,17 +12,18 @@ import Author from "./components/Author";
 import BlogPost from "./components/BlogPost";
 
 function App() {
+  const [pathname, setPathname] = useState("/");
   return (
     <div className="app">
-      <Header />
+      <Header pathname={pathname} />
       <Router className="content">
-        <Homepage path="/" />
-        <Blog path="/blog" />
-        <YourStories path="/your-stories" />
-        <About path="/about" />
-        <SocialMedia path="/social-media" />
-        <Author path="/authors/:author" />
-        <BlogPost path="/posts/:articleid" />
+        <Homepage path="/" setPathname={setPathname} />
+        <Blog path="/blog" setPathname={setPathname} />
+        <YourStories path="/your-stories" setPathname={setPathname} />
+        <About path="/about" setPathname={setPathname} />
+        <SocialMedia path="/social-media" setPathname={setPathname} />
+        <Author path="/about/authors/:author" />
+        <BlogPost path="/blog/posts/:articleid" />
       </Router>
       <Footer />
     </div>

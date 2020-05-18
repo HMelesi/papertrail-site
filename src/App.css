@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Quattrocento&family=Sansita:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kameron&family=Sansita:wght@800&display=swap");
 
 :root {
   --color--light: #f3a712;
@@ -8,7 +8,7 @@
   --color--bright: #49beaa;
   --color--mute: #456990;
   --font--title: "Sansita", sans-serif;
-  --font--content: "Quattrocento", serif;
+  --font--content: "Kameron", serif;
 }
 
 body {
@@ -28,8 +28,8 @@ body {
 }
 
 .content {
-  max-width: 1000px;
-  margin: 20px;
+  /* max-width: 1000px;
+  margin: 20px; */
 }
 
 .link__light {
@@ -40,6 +40,16 @@ body {
 .link__light:visited {
   text-decoration: none;
   color: var(--color--light);
+}
+
+.link__pink {
+  text-decoration: none;
+  color: var(--color--mid);
+}
+
+.link__pink:visited {
+  text-decoration: none;
+  color: var(--color--mid);
 }
 
 .link__dark {
@@ -79,17 +89,17 @@ body {
   top: 0;
   background-color: var(--color--mute);
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: var(--color--dark);
-  font-family: var(--font--title);
 }
 
 .app-navbar {
   background-color: var(--color--dark);
-  width: 100vw;
+  width: 100%;
+  position: sticky;
+  top: 22%;
 }
 
 .app-footer {

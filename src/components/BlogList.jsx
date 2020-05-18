@@ -5,7 +5,7 @@ import Loading from "./Loading";
 import ArticleSort from "./ArticleSort";
 import { TiChevronLeft, TiChevronRight } from "react-icons/ti";
 
-const BlogList = () => {
+const BlogList = ({ setPathname }) => {
   const [blogs, setBlogs] = useState([]);
   const [isLoading, setLoading] = useState(true);
   const [sort_by, setSortBy] = useState("created_at");
@@ -18,6 +18,7 @@ const BlogList = () => {
   const [totalArticles, setTotalArticles] = useState(0);
 
   useEffect(() => {
+    setPathname("/blog");
     fetchBlogs(topic, author, sort_by, order, limit, p);
   }, [topic, p, sort_by, author, limit, order]);
 

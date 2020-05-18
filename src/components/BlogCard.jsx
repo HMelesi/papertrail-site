@@ -15,7 +15,7 @@ const BlogCard = ({ articleid, title }) => {
         Vivamus quis orci sit amet est congue pellentesque id ut massa. Integer
         lobortis cursus semper.
       </p>
-      <Link to={`/posts/${articleid}`} className="link__dark blog__linkto">
+      <Link to={`/blog/posts/${articleid}`} className="link__dark blog__linkto">
         read more
       </Link>
     </li>
