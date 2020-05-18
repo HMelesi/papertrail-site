@@ -41,7 +41,7 @@ const BlogList = () => {
     <div>
       <ul className="blog__list">
         {blogs.map((blog) => {
-          return <BlogCard title={blog.title} />;
+          return <BlogCard title={blog.title} articleid={blog.article_id} />;
         })}
       </ul>
     </div>

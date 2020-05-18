@@ -22,7 +22,7 @@ function App() {
         <About path="/about" />
         <SocialMedia path="/social-media" />
         <Author path="/authors/:author" />
-        <BlogPost path="/posts/:title" />
+        <BlogPost path="/posts/:articleid" />
       </Router>
       <Footer />
     </div>

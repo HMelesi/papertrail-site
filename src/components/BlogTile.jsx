@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "@reach/router";
 
-const BlogCard = ({ articleid, title }) => {
+const BlogTile = ({ articleid, title }) => {
   return (
-    <li className="blog__list__item">
-      <h2 className="blog__list__item__title">{title}</h2>
-      <p className="blog__list__item__content">
+    <li className="blog__tilelist__tile">
+      <h2 className="blog__tilelist__tile__title">{title}</h2>
+
+      <p className="blog__tilelist__tile__content">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam cursus
         diam et facilisis ultrices. Pellentesque fringilla pellentesque
         vulputate. Pellentesque nec consequat neque, nec fringilla est.
@@ -15,6 +16,7 @@ const BlogCard = ({ articleid, title }) => {
         Vivamus quis orci sit amet est congue pellentesque id ut massa. Integer
         lobortis cursus semper.
       </p>
+
       <Link to={`/posts/${articleid}`} className="link__dark blog__linkto">
         read more
       </Link>
@@ -22,4 +24,4 @@ const BlogCard = ({ articleid, title }) => {
   );
 };
 
-export default BlogCard;
+export default BlogTile;

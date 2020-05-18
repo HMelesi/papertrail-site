@@ -6,7 +6,7 @@ export default class Header extends Component {
   render() {
     return (
       <header className="app-header">
-        <Link className="link__light" to="/">
+        <Link className="link__dark" to="/">
           <h1>papertrail</h1>
         </Link>
         <Navbar />

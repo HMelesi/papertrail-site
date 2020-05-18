@@ -28,7 +28,8 @@ body {
 }
 
 .content {
-  max-width: 80vw;
+  max-width: 1000px;
+  margin: 20px;
 }
 
 .link__light {
@@ -41,6 +42,28 @@ body {
   color: var(--color--light);
 }
 
+.link__dark {
+  text-decoration: none;
+  color: var(--color--dark);
+}
+
+.link__dark:visited {
+  text-decoration: none;
+  color: var(--color--dark);
+}
+
+.button--arrow {
+  background-color: var(--color--lightest);
+  color: var(--color--mid);
+  border: none;
+}
+
+.button--arrow:disabled {
+  background-color: var(--color--lightest);
+  color: var(--color--lightest);
+  border: none;
+}
+
 .app-header {
   position: sticky;
   top: 0;
@@ -50,7 +73,7 @@ body {
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: var(--color--light);
+  color: var(--color--dark);
   font-family: var(--font--title);
 }
 
@@ -90,6 +113,12 @@ body {
   font-size: calc(10px + 2vmin);
 }
 
+.page__subheader {
+  font-family: var(--font--title);
+  color: var(--color--light);
+  font-size: calc(6px + 2vmin);
+}
+
 .page__content {
   font-family: var(--font--content);
   font-size: calc(8px + 1vmin);
@@ -120,6 +149,46 @@ body {
 
 .blog__list__item__content {
   font-family: var(--font--content);
+  font-size: calc(8px + 1vmin);
+}
+
+.blog__tilelist {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog__tilelist__tile {
+  height: 200px;
+  width: 200px;
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid var(--color--mid);
+  text-align: left;
+}
+
+.blog__tilelist__tile__title {
+  font-family: var(--font--title);
+  color: var(--color--bright);
+  font-size: calc(8px + 1vmin);
+}
+
+.blog__tilelist__tile__content {
+  font-family: var(--font--content);
+  font-size: calc(5px + 1vmin);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.blog__linkto {
+  font-family: var(--font--title);
+  color: var(--color--dark);
   font-size: calc(8px + 1vmin);
 }
 

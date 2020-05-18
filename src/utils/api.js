@@ -11,3 +11,9 @@ export const getBlogs = (topic, author, sort_by, order, limit, p) => {
       return { articles: data.articles, total_count: data.total_count };
     });
 };
+
+export const getBlog = (blog_id) => {
+  return request.get(`/articles/${blog_id}`).then(({ data }) => {
+    return data.article;
+  });
+};
