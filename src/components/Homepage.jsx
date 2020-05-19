@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 // import InstaFeed from "./InstaFeed";
 import FeatureBlog from "./FeatureBlog";
 import RelatedPosts from "./RelatedPosts";
-import teddy from "../images/teddy.png";
 
 const Homepage = ({ setPathname }) => {
   useEffect(() => {
@@ -11,7 +10,6 @@ const Homepage = ({ setPathname }) => {
 
   return (
     <div>
-      <img src={teddy} alt="teddy" height="100px" />
       <h2 className="page__header">welcome to paper trail</h2>
       <p className="page__content">
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem
