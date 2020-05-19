@@ -54,29 +54,31 @@ const RelatedPosts = ({ _topic, _author }) => {
 
   return (
     <div>
-      <h3 className="page__subheader">
-        {_topic ? (
-          <p>related posts</p>
-        ) : _author ? (
-          <p>more posts by this author</p>
-        ) : (
-          <p>most recent posts</p>
-        )}
-      </h3>
-      <button
-        className="button--arrow"
-        onClick={() => arrowClick(-1)}
-        disabled={p * limit <= 2}
-      >
-        <TiChevronLeft />
-      </button>
-      <button
-        className="button--arrow"
-        onClick={() => arrowClick(1)}
-        disabled={p * limit >= totalArticles}
-      >
-        <TiChevronRight />
-      </button>
+      <section className="button__control">
+        <button
+          className="button--arrow"
+          onClick={() => arrowClick(-1)}
+          disabled={p * limit <= 2}
+        >
+          <TiChevronLeft />
+        </button>
+        <h3 className="button__control__text">
+          {_topic ? (
+            <p>related posts</p>
+          ) : _author ? (
+            <p>more posts by this author</p>
+          ) : (
+            <p>most recent posts</p>
+          )}
+        </h3>
+        <button
+          className="button--arrow"
+          onClick={() => arrowClick(1)}
+          disabled={p * limit >= totalArticles}
+        >
+          <TiChevronRight />
+        </button>
+      </section>
 
       <ul className="blog__tilelist">
         {blogs.map((blog) => {
