@@ -199,6 +199,22 @@ body {
   font-size: calc(6px + 2vmin);
 }
 
+.collapsible__head {
+  color: var(--color--mid);
+  font-family: var(--font--content);
+  font-size: calc(8px + 1vmin);
+  text-align: left;
+  padding: calc(10px + 2vmin);
+}
+
+.collapsible__content {
+  color: var(--color--mid);
+  font-family: var(--font--content);
+  font-size: calc(8px + 1vmin);
+  text-align: left;
+  padding: calc(10px + 2vmin);
+}
+
 .page__content {
   font-family: var(--font--content);
   font-size: calc(8px + 1vmin);
