@@ -7,48 +7,44 @@ const Navbar = ({ pathname }) => {
     <div className="app-navbar">
       <nav>
         <ul className="navbar-list">
-          <li className="navbar-list-item">
+          {/* <li className="navbar-list-item">
             <Link
               to="/"
-              className={pathname === "/" ? "link__pink" : "link__light"}
+              className={pathname === "/" ? "link__light" : "link__dark"}
             >
               home
             </Link>
-          </li>
+          </li> */}
           <li className="navbar-list-item">
             <Link
-              to="/blog"
-              className={pathname === "/blog" ? "link__pink" : "link__light"}
-            >
-              all blog posts
-            </Link>
-          </li>
-          <li className="navbar-list-item">
-            <Link
-              to="/your-stories"
-              className={
-                pathname === "/your-stories" ? "link__pink" : "link__light"
-              }
-            >
-              your stories
-            </Link>
-          </li>
-          <li className="navbar-list-item">
-            <Link
-              to="/social-media"
-              className={
-                pathname === "/social-media" ? "link__pink" : "link__light"
-              }
-            >
-              social media
-            </Link>
-          </li>
-          <li className="navbar-list-item">
-            <Link
-              to="/about"
-              className={pathname === "/about" ? "link__pink" : "link__light"}
+              to="/"
+              className={pathname === "/" ? "link__light" : "link__dark"}
             >
               about
+            </Link>
+          </li>
+          <li className="navbar-list-item">
+            <Link
+              to="/how-to"
+              className={pathname === "/how-to" ? "link__light" : "link__dark"}
+            >
+              how to
+            </Link>
+          </li>
+          {/* <li className="navbar-list-item">
+            <Link
+              to="/blog"
+              className={pathname === "/blog" ? "link__light" : "link__dark"}
+            >
+              blog
+            </Link>
+          </li> */}
+          <li className="navbar-list-item">
+            <Link
+              to="/contact"
+              className={pathname === "/contact" ? "link__light" : "link__dark"}
+            >
+              contact
             </Link>
           </li>
         </ul>
