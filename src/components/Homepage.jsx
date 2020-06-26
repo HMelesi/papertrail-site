@@ -22,11 +22,11 @@ const Homepage = ({ setPathname }) => {
         eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
         voluptatem.
       </p>
-      <h2 className="page__header">feature blog post</h2>
+      {/* <h2 className="page__header">feature blog post</h2>
 
       <FeatureBlog />
       <RelatedPosts _topic={null} _author={null} />
-      <h3 className="page__subheader">maybe a social media feed</h3>
+      <h3 className="page__subheader">maybe a social media feed</h3> */}
     </div>
   );
 };

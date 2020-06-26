@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import { Router } from "@reach/router";
 import Homepage from "./components/Homepage.jsx";
 import Header from "./components/Header";
 import Blog from "./components/BlogList";
-import YourStories from "./components/YourStories";
+import HowTo from "./components/HowTo";
 import About from "./components/About";
-import SocialMedia from "./components/SocialMedia";
 import Footer from "./components/Footer";
 import Author from "./components/Author";
 import BlogPost from "./components/BlogPost";
+import Contact from "./components/Contact";
 
 function App() {
   const [pathname, setPathname] = useState("/");
@@ -17,15 +17,15 @@ function App() {
     <div className="app">
       <Header pathname={pathname} />
       <Router className="content">
-        <Homepage path="/" setPathname={setPathname} />
-        <Blog path="/blog" setPathname={setPathname} />
-        <YourStories path="/your-stories" setPathname={setPathname} />
-        <About path="/about" setPathname={setPathname} />
-        <SocialMedia path="/social-media" setPathname={setPathname} />
-        <Author path="/about/authors/:author" />
-        <BlogPost path="/blog/posts/:articleid" />
+        {/* <Homepage path="/" setPathname={setPathname} /> */}
+        {/* <Blog path="/blog" setPathname={setPathname} /> */}
+        <HowTo path="/how-to" setPathname={setPathname} />
+        <About path="/" setPathname={setPathname} />
+        <Contact path="/contact" setPathname={setPathname} />
+        {/* <Author path="/about/authors/:author" />
+        <BlogPost path="/blog/posts/:articleid" /> */}
       </Router>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

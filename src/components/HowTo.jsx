@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-const YourStories = ({ setPathname }) => {
+const HowTo = ({ setPathname }) => {
   useEffect(() => {
-    setPathname("/your-stories");
+    setPathname("/how-to");
   });
 
   return (
@@ -44,4 +44,4 @@ const YourStories = ({ setPathname }) => {
   );
 };
 
-export default YourStories;
+export default HowTo;
