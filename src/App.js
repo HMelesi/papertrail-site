@@ -10,12 +10,15 @@ import Footer from "./components/Footer";
 import Author from "./components/Author";
 import BlogPost from "./components/BlogPost";
 import Contact from "./components/Contact";
+import Headroom from "react-headroom";
 
 function App() {
   const [pathname, setPathname] = useState("/");
   return (
     <div className="app">
-      <Header pathname={pathname} />
+      <Headroom disableInlineStyles={true}>
+        <Header pathname={pathname} />
+      </Headroom>
       <Router className="content">
         {/* <Homepage path="/" setPathname={setPathname} /> */}
         {/* <Blog path="/blog" setPathname={setPathname} /> */}

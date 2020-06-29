@@ -10,6 +10,7 @@
   --font--title: "Sansita", sans-serif;
   --font--content: "Kameron", serif;
   --border--radius: 5px;
+  --app--width: 90vw;
 }
 
 body {
@@ -21,8 +22,8 @@ body {
 }
 
 .app {
-  min-width: 80vw;
-  max-width: 80vw;
+  min-width: var(--app--width);
+  max-width: var(--app--width);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -33,7 +34,8 @@ body {
 .content {
   background-color: var(--color--lightest);
   border-radius: var(--border--radius);
-  min-width: 80vw;
+  min-width: var(--app--width);
+  margin-top: 10px;
 }
 
 .link__light {
@@ -102,40 +104,54 @@ body {
   justify-content: center;
 }
 
-.app-header {
-  position: sticky;
-  top: 0;
+.headroom {
   background-color: var(--color--mute);
   display: flex;
-  width: 100%;
+  width: var(--app--width);
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
   border-bottom-left-radius: var(--border--radius);
   border-bottom-right-radius: var(--border--radius);
-  transition: 500ms;
+  /* top: 0; */
+  z-index: 1;
+  transition: 200ms;
 }
 
-@media (max-width: 600px) {
-  .app-header.hidden {
-    /* visibility: hidden; */
-    transition: 500ms;
-    transform: translateY(-86%);
-  }
+.headroom--unfixed {
+  position: relative;
+  transform: translateY(0%);
+  left: 50%;
+  margin-left: calc(var(--app--width) * (-0.5));
 }
 
-@media (min-width: 600px) {
-  .app-header.hidden {
-    /* visibility: hidden; */
-    transition: 1000ms;
-    transform: translateY(-86%);
-  }
+.headroom--scrolled {
+  transition: transform 200ms ease-in-out;
+}
+
+.headroom--unpinned {
+  position: relative;
+  transform: translateY(-100%);
+  left: 50%;
+  margin-left: calc(var(--app--width) * (-0.5));
+}
+
+.headroom--pinned {
+  position: fixed;
+  transform: translateY(0%);
+  left: 50%;
+  margin-left: calc(var(--app--width) * (-0.5));
+}
+
+.header__logo {
+  max-height: 30vh;
+  max-width: 30vw;
+  margin-top: 10px;
 }
 
 .app-navbar {
   background-color: var(--color--lightest);
-  width: 100%;
+  width: var(--app--width);
   border-bottom-left-radius: var(--border--radius);
   border-bottom-right-radius: var(--border--radius);
 }
@@ -143,17 +159,11 @@ body {
 .app-footer {
   margin-top: 20px;
   background-color: var(--color--light);
-  width: 100%;
+  width: var(--app--width);
   color: var(--color--lightest);
   font-family: var(--font--title);
   border-top-left-radius: var(--border--radius);
   border-top-right-radius: var(--border--radius);
-}
-
-.header__logo {
-  max-height: 20%;
-  max-width: 45%;
-  margin-top: 10px;
 }
 
 .navbar-list {
