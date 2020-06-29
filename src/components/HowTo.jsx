@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Collapsible from "react-collapsible";
 import TriggerClosed from "../components/TriggerClosed";
 import TriggerOpened from "../components/TriggerOpened";
+import shapes from "../images/shapes.png";
 
 const HowTo = ({ setPathname }) => {
   useEffect(() => {
@@ -102,6 +103,8 @@ const HowTo = ({ setPathname }) => {
       </Collapsible>
 
       <p className="page__content">...then repeat with a new book!</p>
+
+      <img src={shapes} alt="papertrail shapes" className="shapes" />
       <h2 className="page__header">Continue a papertrail</h2>
       <p className="page__content">
         Someone’s sent you a papertrail book. Now what? It’s simple - read the

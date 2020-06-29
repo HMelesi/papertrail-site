@@ -10,14 +10,14 @@ function useDocumentScrollThrottled(callback) {
       document.documentElement || document.body;
 
     setScrollPosition((previousPosition) => {
-      previousScrollTop = previousPosition;
+      previousScrollTop = 0;
       return currentScrollTop;
     });
 
     callback({ previousScrollTop, currentScrollTop });
   }
 
-  const handleDocumentScrollThrottled = throttle(handleDocumentScroll, 250);
+  const handleDocumentScrollThrottled = throttle(handleDocumentScroll, 0);
 
   useEffect(() => {
     window.addEventListener("scroll", handleDocumentScrollThrottled);

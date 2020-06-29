@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import EEAL from "../images/EEAL.png";
 import FIP from "../images/FIP.png";
 import { Link } from "@reach/router";
+import shapes from "../images/shapes.png";
 
 const About = ({ setPathname }) => {
   useEffect(() => {
@@ -25,14 +26,17 @@ const About = ({ setPathname }) => {
         <br></br>
         That’s when we came up with the idea of a ‘papertrail’ - a journey that
         a book embarks on to reach as many people as possible and to get them
-        talking and discussing important issues with each other.<br></br>
-        <br></br>A Papertrail book can be anything; a history book, novel,
-        collection of poetry, non-fiction - whatever you like, as long as it
-        makes you think. Personally, we’re particularly interested in books that
-        teach us more about issues surrounding race (especially in light of the
-        Black Lives Matter movement, which has shown us how much more we have to
-        listen and learn), gender equality, trans rights and human rights, as
-        well as questions around the environment and sustainability.<br></br>
+        talking and discussing important issues with each other.
+      </p>
+      <img src={shapes} alt="papertrail shapes" className="shapes" />
+      <p className="page__content">
+        A Papertrail book can be anything; a history book, novel, collection of
+        poetry, non-fiction - whatever you like, as long as it makes you think.
+        Personally, we’re particularly interested in books that teach us more
+        about issues surrounding race (especially in light of the Black Lives
+        Matter movement, which has shown us how much more we have to listen and
+        learn), gender equality, trans rights and human rights, as well as
+        questions around the environment and sustainability.<br></br>
         <br></br>
         Books are a vital tool in our efforts to listen, educate ourselves, and
         confront our biases and prejudices - and Papertrail is our way to try to
