@@ -10,7 +10,7 @@ const About = ({ setPathname }) => {
 
   return (
     <div>
-      <h2 className="page__header">about papertrail</h2>
+      <h2 className="page__header">About papertrail</h2>
       <p className="page__content">
         Papertrail is an idea created by two friends, Franny and Lizzie, who
         wanted to share books that made them think and challenged them - and
