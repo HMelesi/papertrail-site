@@ -14,8 +14,8 @@ const HowTo = ({ setPathname }) => {
       <h2 className="page__header">Start a papertrail</h2>
 
       <Collapsible
-        trigger={<TriggerClosed trigger="Read a book" />}
-        triggerWhenOpen={<TriggerOpened trigger="Read a book" />}
+        trigger={<TriggerClosed trigger="1. Read a book" />}
+        triggerWhenOpen={<TriggerOpened trigger="1. Read a book" />}
         triggerClassName="collapsible__head"
         triggerOpenedClassName="collapsible__head--open"
       >
@@ -26,8 +26,8 @@ const HowTo = ({ setPathname }) => {
       </Collapsible>
 
       <Collapsible
-        trigger={<TriggerClosed trigger="Post online" />}
-        triggerWhenOpen={<TriggerOpened trigger="Post online" />}
+        trigger={<TriggerClosed trigger="2. Post online" />}
+        triggerWhenOpen={<TriggerOpened trigger="2. Post online" />}
         triggerClassName="collapsible__head"
         triggerOpenedClassName="collapsible__head--open"
       >
@@ -39,8 +39,8 @@ const HowTo = ({ setPathname }) => {
         </p>
       </Collapsible>
       <Collapsible
-        trigger={<TriggerClosed trigger="Let us know" />}
-        triggerWhenOpen={<TriggerOpened trigger="Let us know" />}
+        trigger={<TriggerClosed trigger="3. Let us know" />}
+        triggerWhenOpen={<TriggerOpened trigger="3. Let us know" />}
         triggerClassName="collapsible__head"
         triggerOpenedClassName="collapsible__head--open"
       >
@@ -56,8 +56,8 @@ const HowTo = ({ setPathname }) => {
       </Collapsible>
 
       <Collapsible
-        trigger={<TriggerClosed trigger="Leave a message" />}
-        triggerWhenOpen={<TriggerOpened trigger="Leave a message" />}
+        trigger={<TriggerClosed trigger="4. Leave a message" />}
+        triggerWhenOpen={<TriggerOpened trigger="4. Leave a message" />}
         triggerClassName="collapsible__head"
         triggerOpenedClassName="collapsible__head--open"
       >
@@ -73,8 +73,8 @@ const HowTo = ({ setPathname }) => {
       </Collapsible>
 
       <Collapsible
-        trigger={<TriggerClosed trigger="Sign it" />}
-        triggerWhenOpen={<TriggerOpened trigger="Sign it" />}
+        trigger={<TriggerClosed trigger="5. Sign it" />}
+        triggerWhenOpen={<TriggerOpened trigger="5. Sign it" />}
         triggerClassName="collapsible__head"
         triggerOpenedClassName="collapsible__head--open"
       >
@@ -88,8 +88,8 @@ const HowTo = ({ setPathname }) => {
       </Collapsible>
 
       <Collapsible
-        trigger={<TriggerClosed trigger="Send it on" />}
-        triggerWhenOpen={<TriggerOpened trigger="Send it on" />}
+        trigger={<TriggerClosed trigger="6. Send it on" />}
+        triggerWhenOpen={<TriggerOpened trigger="6. Send it on" />}
         triggerClassName="collapsible__head"
         triggerOpenedClassName="collapsible__head--open"
       >
