@@ -1,9 +1,9 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "The Papertrail",
+  "name": "The Papertrail",
   "icons": [
     {
-      "src": "pinkbook.jpg",
+      "src": "logo.jpg",
       "type": "image/jpg",
       "sizes": "512x512"
     }

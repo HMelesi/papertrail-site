@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Collapsible from "react-collapsible";
+import TriggerClosed from "../components/TriggerClosed";
+import TriggerOpened from "../components/TriggerOpened";
 
 const HowTo = ({ setPathname }) => {
   useEffect(() => {
@@ -10,14 +12,24 @@ const HowTo = ({ setPathname }) => {
     <div>
       <h2 className="page__header">Start a papertrail</h2>
 
-      <Collapsible trigger="Read the book" className="collapsible__head">
+      <Collapsible
+        trigger={<TriggerClosed trigger="Read a book" />}
+        triggerWhenOpen={<TriggerOpened trigger="Read a book" />}
+        triggerClassName="collapsible__head"
+        triggerOpenedClassName="collapsible__head--open"
+      >
         <p className="collapsible__content">
           If you’re buying online, consider doing so in a way that supports your
           local bookshop.
         </p>
       </Collapsible>
 
-      <Collapsible trigger="Post online" className="collapsible__head">
+      <Collapsible
+        trigger={<TriggerClosed trigger="Post online" />}
+        triggerWhenOpen={<TriggerOpened trigger="Post online" />}
+        triggerClassName="collapsible__head"
+        triggerOpenedClassName="collapsible__head--open"
+      >
         <p className="collapsible__content">
           If you like the book and it made you think, post about it online with
           a photo of the book and a little bit about why you liked it. You could
@@ -25,7 +37,12 @@ const HowTo = ({ setPathname }) => {
           Wherever takes your fancy.
         </p>
       </Collapsible>
-      <Collapsible trigger="Let us know" className="collapsible__head">
+      <Collapsible
+        trigger={<TriggerClosed trigger="Let us know" />}
+        triggerWhenOpen={<TriggerOpened trigger="Let us know" />}
+        triggerClassName="collapsible__head"
+        triggerOpenedClassName="collapsible__head--open"
+      >
         <p className="collapsible__content">
           When you post the photo with your thoughts, we’d love it if you’d tag
           us (@the_papertrail_) and chuck in a few Papertrail hashtags for good
@@ -37,7 +54,12 @@ const HowTo = ({ setPathname }) => {
         </p>
       </Collapsible>
 
-      <Collapsible trigger="Leave a message" className="collapsible__head">
+      <Collapsible
+        trigger={<TriggerClosed trigger="Leave a message" />}
+        triggerWhenOpen={<TriggerOpened trigger="Leave a message" />}
+        triggerClassName="collapsible__head"
+        triggerOpenedClassName="collapsible__head--open"
+      >
         <p className="collapsible__content">
           Inside the front cover of the book, write something explaining it’s
           part of a papertrail and what to do to join in. Ideally, this would
@@ -49,7 +71,12 @@ const HowTo = ({ setPathname }) => {
         </p>
       </Collapsible>
 
-      <Collapsible trigger="Sign it" className="collapsible__head">
+      <Collapsible
+        trigger={<TriggerClosed trigger="Sign it" />}
+        triggerWhenOpen={<TriggerOpened trigger="Sign it" />}
+        triggerClassName="collapsible__head"
+        triggerOpenedClassName="collapsible__head--open"
+      >
         <p className="collapsible__content">
           Then underneath that, write your name inside the front cover of the
           book. The idea is that everyone who reads the book as part of a
@@ -59,7 +86,12 @@ const HowTo = ({ setPathname }) => {
         </p>
       </Collapsible>
 
-      <Collapsible trigger="Send it on" className="collapsible__head">
+      <Collapsible
+        trigger={<TriggerClosed trigger="Send it on" />}
+        triggerWhenOpen={<TriggerOpened trigger="Send it on" />}
+        triggerClassName="collapsible__head"
+        triggerOpenedClassName="collapsible__head--open"
+      >
         <p className="collapsible__content">
           Send the book to a friend you think would enjoy it and ask them to
           follow the same procedure and pass it on when they’re done. Can’t
