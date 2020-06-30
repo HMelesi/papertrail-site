@@ -47,11 +47,12 @@ const HowTo = ({ setPathname }) => {
         <p className="collapsible__content">
           When you post the photo with your thoughts, we’d love it if you’d tag
           us (@the_papertrail_) and chuck in a few Papertrail hashtags for good
-          measure, e.g. #papertrail (original, that one…) #FollowThePapertrail
-          #GiveACoverToAnother #pagerage (for a book that plunged you into
-          righteous anger - see e.g. Invisible Women…) #LiberateAMate (that
-          one’s a pun on the Latin for book, ‘liber’ - yes it’s geeky, and no we
-          don’t care)
+          measure, e.g. <br></br>a. #papertrail (original, that one…) <br></br>
+          b. #FollowThePapertrail
+          <br></br>c. #GiveACoverToAnother <br></br>d. #pagerage (for a book
+          that plunged you into righteous anger - see e.g. Invisible Women…){" "}
+          <br></br>e. #LiberateAMate (that one’s a pun on the Latin for book,
+          ‘liber’ - yes it’s geeky, and no we don’t care)
         </p>
       </Collapsible>
 

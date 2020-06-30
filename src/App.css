@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Kameron&family=Sansita:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kameron&family=Sansita:ital,wght@0,800;1,400&display=swap");
 
 :root {
   --color--light: #f3a712;
@@ -125,7 +125,7 @@ body {
   transition: transform 300ms ease-in-out;
 }
 
-.headroom--unfixed {
+/* .headroom--unfixed {
   position: relative;
   transform: translateY(0%);
   left: 50%;
@@ -148,25 +148,23 @@ body {
   transform: translateY(0%);
   left: 50%;
   margin-left: calc(var(--app--width) * (-0.5));
-}
+} */
 
 .header__logo {
   max-height: 30%;
   max-width: 30%;
   margin-top: 10px;
-  transition: 200ms;
 }
 
 .header__minilogo {
   max-height: 20%;
   max-width: 40%;
   padding: 10px;
-  transition: 200ms;
 }
 
 .shapes {
-  max-height: 20%;
-  max-width: 40%;
+  max-height: 5vh;
+  max-width: 30%;
   padding: 10px;
 }
 
@@ -250,13 +248,20 @@ body {
   font-family: var(--font--title);
   color: var(--color--mid);
   font-size: calc(10px + 2vmin);
-  padding: 10px;
+  padding-top: 20px;
 }
 
 .page__subheader {
   font-family: var(--font--title);
   color: var(--color--light);
   font-size: calc(6px + 2vmin);
+}
+
+.page__emphasis {
+  font-family: var(--font--title);
+  font-style: italic;
+  color: var(--color--dark);
+  font-size: (8px + 1vmin);
 }
 
 .Collapsible {
@@ -275,7 +280,7 @@ body {
 .collapsible__head {
   color: var(--color--dark);
   border: 2px var(--color--bright) solid;
-  font-family: var(--font--content);
+  font-family: var(--font--title);
   font-size: calc(8px + 1vmin);
   text-align: left;
   padding: calc(10px + 2vmin);
@@ -285,7 +290,7 @@ body {
 .collapsible__head--open {
   color: var(--color--dark);
   border: 2px var(--color--mid) solid;
-  font-family: var(--font--content);
+  font-family: var(--font--title);
   font-size: calc(8px + 1vmin);
   text-align: left;
   padding: calc(10px + 2vmin);
