@@ -16,7 +16,8 @@ const About = ({ setPathname }) => {
         Papertrail is an idea created by two friends, Franny and Lizzie, who
         wanted to share books that made them think and challenged them - and
         occasionally caused them #pagerage (‘page rage’ = to feel righteous
-        anger over injustices revealed by the pages of a book)...<br></br>
+        anger over injustices revealed by the pages of a book)...
+        <br></br>
         <br></br>
         After starting to swap books with each other, we realised that we were
         both expanding our horizons and finding out about things we might not

@@ -10,7 +10,10 @@ const Contact = ({ setPathname }) => {
       <h2 className="page__header">Contact</h2>
       <p className="page__content">
         Still worried? Any questions? <br></br>
-        <br></br>Drop us an email: thepapertrailbegins@gmail.com
+        <br></br>Drop us an email:{" "}
+        <a href="mailto:thepapertrailbegins@gmail.com" className="link__pink">
+          thepapertrailbegins@gmail.com
+        </a>
         <br></br>
         <br></br>or a DM on{" "}
         <a
