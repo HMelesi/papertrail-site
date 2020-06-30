@@ -3,8 +3,8 @@
   "name": "The Papertrail",
   "icons": [
     {
-      "src": "logo.jpg",
-      "type": "image/jpg",
+      "src": "logo.png",
+      "type": "image/png",
       "sizes": "512x512"
     }
   ],
