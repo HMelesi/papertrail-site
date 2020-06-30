@@ -20,7 +20,7 @@ const Header = ({ pathname }) => {
       document.documentElement || document.body;
     if (currentScrollTop > 0) {
       setShouldHideHeader(true);
-    } else if (currentScrollTop === 0) {
+    } else if (currentScrollTop <= 0) {
       setShouldHideHeader(false);
     }
   };
