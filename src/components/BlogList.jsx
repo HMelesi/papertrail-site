@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import BlogCard from "./BlogCard";
-import * as api from "../utils/api";
-import Loading from "./Loading";
-import ArticleSort from "./ArticleSort";
-import { TiChevronLeft, TiChevronRight } from "react-icons/ti";
+// import * as api from "../utils/api";
+// import Loading from "./Loading";
+// import ArticleSort from "./ArticleSort";
+// import { TiChevronLeft, TiChevronRight } from "react-icons/ti";
 import { gql } from "apollo-boost";
 import { Query } from "react-apollo";
-import { Link } from "@reach/router";
 
 const GET_POSTS = gql`
   query posts {
