@@ -1,19 +1,9 @@
-import axios from "axios";
+// import ApolloClient from "apollo-client";
+// import ApolloClient from "apollo-boost";
+// import { HttpLink } from "apollo-link-http";
+// import { ApolloProvider } from "react-apollo";
+// import { graphql } from "react-apollo";
+// import gql from "graphql-tag";
+// import BlogList from "../components/BlogList";
 
-const request = axios.create({
-  baseURL: "https://hm-nc-news-app.herokuapp.com/api/",
-});
-
-export const getBlogs = (topic, author, sort_by, order, limit, p) => {
-  return request
-    .get("/articles", { params: { topic, author, sort_by, order, limit, p } })
-    .then(({ data }) => {
-      return { articles: data.articles, total_count: data.total_count };
-    });
-};
-
-export const getBlog = (blog_id) => {
-  return request.get(`/articles/${blog_id}`).then(({ data }) => {
-    return data.article;
-  });
-};
+// export default graphql(FeedQuery)(BlogList);
