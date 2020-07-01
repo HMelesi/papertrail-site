@@ -1,20 +1,31 @@
 import React from "react";
 // import RelatedPosts from "./RelatedPosts";
 // import * as api from "../utils/api";
-// import Loading from "./Loading";
+import Loading from "./Loading";
 // import { TiHeartOutline, TiHeartFullOutline } from "react-icons/ti";
 import { gql } from "apollo-boost";
 import { Query } from "react-apollo";
+import { convertDate } from "../utils/utils";
+// const ReactDOM = require("react-dom");
+const ReactMarkdown = require("react-markdown");
+
+// import { TypeKind } from "graphql";
 
 const GET_POST_DETAIL = gql`
   query blogPostById($ID: ID!) {
     blogPost(where: { id: $ID }) {
       title
-      description
-      id
+      author
+      guestAuthor
+      votes
+      tags
+      type
+      content {
+        markdown
+      }
       createdAt
       heroImage {
-        fileName
+        url
       }
     }
   }
@@ -23,15 +34,36 @@ const GET_POST_DETAIL = gql`
 const BlogPost = ({ setPathname, id }) => (
   <Query query={GET_POST_DETAIL} variables={{ ID: id }}>
     {({ loading, error, data }) => {
-      console.log(typeof id);
       setPathname("/blog");
 
-      if (loading) return <div>Loading...</div>;
+      if (loading) return <Loading />;
       if (error) return <div>Error :(</div>;
 
+      const xmlString = data.blogPost.content.markdown;
+      const dateString = convertDate(data.blogPost.createdAt);
+
+      console.log(data.blogPost.heroImage.url);
       return (
-        <div>
+        <div className="blogpost">
+          <p className="blogpost__type">{data.blogPost.type}</p>
           <h2 className="page__header">{data.blogPost.title}</h2>
+          <h3 className="page__subheader">
+            {data.blogPost.author === "Guest"
+              ? `Guest author: ${data.blogPost.guestAuthor}`
+              : data.blogPost.author}
+          </h3>
+          <p className="blogpost__date">{dateString}</p>
+
+          <ul className="blog__tags">
+            {data.blogPost.tags.map((tag) => {
+              return <li className="blog__tag">{tag}</li>;
+            })}
+          </ul>
+
+          <div className="page__content">
+            {<ReactMarkdown source={xmlString} escapeHtml={false} />}
+          </div>
+          {/* <div className="page__content">{doc}</div> */}
           {/* <h3 className="page__subheader">
         votes: {votes + optimisticVotes}
         <button
@@ -50,36 +82,7 @@ const BlogPost = ({ setPathname, id }) => (
       );
     }}
   </Query>
-  // const [article, setArticle] = useState({});
-  // const [isLoading, setLoading] = useState(true);
-  // const [error, setError] = useState(null);
-  // const [optimisticVotes, setOptimisticVotes] = useState(0);
-  // const {
-  //   title,
-  //   body,
-  //   topic,
-  //   author,
-  //   votes,
-  //   comment_count,
-  //   article_id,
-  //   created_at,
-  // } = article;
-  // useEffect(() => {
-  //   fetchArticle(articleid);
-  // }, [articleid]);
-  // const fetchArticle = (article_id) => {
-  //   api
-  //     .getBlog(article_id)
-  //     .then((article) => {
-  //       setArticle(article);
-  //       setLoading(false);
-  //     })
-  //     .catch(({ response }) => {
-  //       const { status, data } = response;
-  //       setError({ status: status, msg: data.message });
-  //       setLoading(false);
-  //     });
-  // };
+
   // const changeVote = () => {
   //   if (optimisticVotes === 0) {
   //     //TODO: actually change the votes in the database
