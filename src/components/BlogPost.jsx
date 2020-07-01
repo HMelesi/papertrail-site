@@ -21,23 +21,23 @@ const BlogPost = ({ articleid }) => {
     created_at,
   } = article;
 
-  useEffect(() => {
-    fetchArticle(articleid);
-  }, [articleid]);
+  // useEffect(() => {
+  //   fetchArticle(articleid);
+  // }, [articleid]);
 
-  const fetchArticle = (article_id) => {
-    api
-      .getBlog(article_id)
-      .then((article) => {
-        setArticle(article);
-        setLoading(false);
-      })
-      .catch(({ response }) => {
-        const { status, data } = response;
-        setError({ status: status, msg: data.message });
-        setLoading(false);
-      });
-  };
+  // const fetchArticle = (article_id) => {
+  //   api
+  //     .getBlog(article_id)
+  //     .then((article) => {
+  //       setArticle(article);
+  //       setLoading(false);
+  //     })
+  //     .catch(({ response }) => {
+  //       const { status, data } = response;
+  //       setError({ status: status, msg: data.message });
+  //       setLoading(false);
+  //     });
+  // };
 
   const changeVote = () => {
     if (optimisticVotes === 0) {

@@ -31,14 +31,14 @@ const Navbar = ({ pathname }) => {
               how to
             </Link>
           </li>
-          {/* <li className="navbar-list-item">
+          <li className="navbar-list-item">
             <Link
               to="/blog"
               className={pathname === "/blog" ? "link__light" : "link__dark"}
             >
               blog
             </Link>
-          </li> */}
+          </li>
           <li className="navbar-list-item">
             <Link
               to="/contact"

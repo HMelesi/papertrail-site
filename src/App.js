@@ -19,7 +19,7 @@ function App() {
 
       <Router className="content">
         {/* <Homepage path="/" setPathname={setPathname} /> */}
-        {/* <Blog path="/blog" setPathname={setPathname} /> */}
+        <Blog path="/blog" setPathname={setPathname} />
         <HowTo path="/how-to" setPathname={setPathname} />
         <About path="/" setPathname={setPathname} />
         <Contact path="/contact" setPathname={setPathname} />
