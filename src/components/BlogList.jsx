@@ -1,7 +1,7 @@
 import React from "react";
 import BlogCard from "./BlogCard";
 // import * as api from "../utils/api";
-// import Loading from "./Loading";
+import Loading from "./Loading";
 // import ArticleSort from "./ArticleSort";
 // import { TiChevronLeft, TiChevronRight } from "react-icons/ti";
 import { gql } from "apollo-boost";
@@ -15,7 +15,7 @@ const GET_POSTS = gql`
       id
       createdAt
       heroImage {
-        fileName
+        url
       }
     }
   }
@@ -60,7 +60,7 @@ const BlogList = ({ setPathname }) => (
     {({ loading, error, data }) => {
       setPathname("/blog");
 
-      if (loading) return <div>Loading...</div>;
+      if (loading) return <Loading />;
       if (error) return <div>Error :(</div>;
 
       return (
@@ -86,6 +86,7 @@ const BlogList = ({ setPathname }) => (
                   title={blog.title}
                   id={blog.id}
                   description={blog.description}
+                  imageUrl={blog.heroImage.url}
                 />
               );
             })}
