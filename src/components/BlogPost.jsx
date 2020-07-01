@@ -5,7 +5,7 @@ import Loading from "./Loading";
 // import { TiHeartOutline, TiHeartFullOutline } from "react-icons/ti";
 import { gql } from "apollo-boost";
 import { Query } from "react-apollo";
-import { convertDate } from "../utils/utils";
+import { convertDate } from "../utils/utils.js";
 // const ReactDOM = require("react-dom");
 const ReactMarkdown = require("react-markdown");
 
