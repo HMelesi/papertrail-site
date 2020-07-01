@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 // import InstaFeed from "./InstaFeed";
-import FeatureBlog from "./FeatureBlog";
-import RelatedPosts from "./RelatedPosts";
+// import FeatureBlog from "./FeatureBlog";
+// import RelatedPosts from "./RelatedPosts";
 
 const Homepage = ({ setPathname }) => {
   useEffect(() => {

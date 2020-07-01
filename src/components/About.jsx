@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from "react";
-import EEAL from "../images/EEAL.png";
-import FIP from "../images/FIP.png";
+import React, { useEffect } from "react";
 import { Link } from "@reach/router";
 import shapes from "../images/shapes.png";
 

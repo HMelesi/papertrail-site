@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Collapsible from "react-collapsible";
 import TriggerClosed from "../components/TriggerClosed";
 import TriggerOpened from "../components/TriggerOpened";

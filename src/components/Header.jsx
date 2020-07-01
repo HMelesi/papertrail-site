@@ -3,7 +3,6 @@ import { Link } from "@reach/router";
 import Navbar from "./Navbar";
 import logo from "../images/logo.png";
 import minilogo from "../images/minilogo.png";
-import useDocumentScrollThrottled from "../hooks/scroll";
 
 const Header = ({ pathname }) => {
   const [shouldHideHeader, setShouldHideHeader] = useState(false);

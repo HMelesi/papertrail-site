@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import shapes from "../images/shapes.png";
+import React, { useEffect } from "react";
 
 const Contact = ({ setPathname }) => {
   useEffect(() => {
