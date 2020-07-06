@@ -3,7 +3,7 @@ import "./App.css";
 import { Router } from "@reach/router";
 // import Homepage from "./components/Homepage.jsx";
 import Header from "./components/Header";
-import Blog from "./components/BlogList";
+import BlogPage from "./components/BlogPage";
 import HowTo from "./components/HowTo";
 import About from "./components/About";
 import Footer from "./components/Footer";
@@ -19,7 +19,7 @@ function App() {
 
       <Router className="content">
         {/* <Homepage path="/" setPathname={setPathname} /> */}
-        <Blog path="/blog" setPathname={setPathname} />
+        <BlogPage path="/blog/*" setPathname={setPathname} />
         <HowTo path="/how-to" setPathname={setPathname} />
         <About path="/" setPathname={setPathname} />
         <Contact path="/contact" setPathname={setPathname} />
