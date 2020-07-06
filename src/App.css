@@ -22,8 +22,9 @@ body {
 }
 
 .app {
-  min-width: var(--app--width);
-  max-width: var(--app--width);
+  /* min-width: var(--app--width);
+  max-width: var(--app--width); */
+
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -65,14 +66,17 @@ img {
 .content {
   background-color: var(--color--lightest);
   border-radius: var(--border--radius);
-  min-width: var(--app--width);
+  /* min-width: var(--app--width); */
   margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-bottom: 10px;
-  width: 80vw;
+  /* width: 80vw; */
+  margin-left: 10vw;
+  margin-right: 10vw;
+  max-width: 600px;
 }
 
 .link__light {
@@ -157,16 +161,17 @@ img {
 }
 
 .app-header {
+  width: 100vw;
   position: sticky;
   top: 0;
   background-color: var(--color--mute);
   display: flex;
-  width: var(--app--width);
+  /* width: var(--app--width); */
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-bottom-left-radius: var(--border--radius);
-  border-bottom-right-radius: var(--border--radius);
+  /* border-bottom-left-radius: var(--border--radius);
+  border-bottom-right-radius: var(--border--radius); */
   z-index: 1;
   transition: transform 300ms ease-in-out;
 }
@@ -221,21 +226,22 @@ img {
 } */
 
 .app-navbar {
+  width: 100vw;
   background-color: var(--color--lightest);
-  width: var(--app--width);
-  border-bottom-left-radius: var(--border--radius);
-  border-bottom-right-radius: var(--border--radius);
+  /* width: var(--app--width); */
+  /* border-bottom-left-radius: var(--border--radius);
+  border-bottom-right-radius: var(--border--radius); */
 }
 
 .app-footer {
+  width: 100vw;
   margin-top: auto;
   background-color: var(--color--light);
-  width: var(--app--width);
-  color: var(--color--lightest);
+  /* width: var(--app--width); */
   font-family: var(--font--title);
-  border-top-left-radius: var(--border--radius);
-  border-top-right-radius: var(--border--radius);
-  align-self: stretch;
+  /* border-top-left-radius: var(--border--radius);
+  border-top-right-radius: var(--border--radius); */
+  /* align-self: stretch; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -272,8 +278,8 @@ img {
   font-size: calc(10px + 1vmin);
   color: white;
   font-family: var(--font--content);
-  border-bottom-left-radius: var(--border--radius);
-  border-bottom-right-radius: var(--border--radius);
+  /* border-bottom-left-radius: var(--border--radius);
+  border-bottom-right-radius: var(--border--radius); */
 }
 
 @media (min-width: 600px) {
