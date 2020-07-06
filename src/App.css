@@ -117,7 +117,7 @@ img {
 
 .link__dark:hover {
   text-decoration: none;
-  color: var(--color--light);
+  color: var(--color--mid);
 }
 
 .button__control {
@@ -210,7 +210,7 @@ img {
 
 .shapes {
   max-height: 5vh;
-  max-width: 30%;
+  width: auto;
   padding: 10px;
 }
 
@@ -348,9 +348,9 @@ img {
   /* width: 40vw; */
   font-family: var(--font--content);
   font-size: calc(8px + 1vmin);
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
   text-align: left;
   padding: calc(10px + 5vmin);
 }
@@ -395,11 +395,20 @@ img {
 
 .blogpost {
   width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blogpost__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .blogpost__type {
   font-family: var(--font--title);
-  color: var(--color--dark);
+
   font-size: calc(2px + 2vmin);
   padding-top: 20px;
 }

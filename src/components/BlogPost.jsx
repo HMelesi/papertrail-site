@@ -6,6 +6,7 @@ import Loading from "./Loading";
 import { gql } from "apollo-boost";
 import { Query } from "react-apollo";
 import { convertDate } from "../utils/utils.js";
+import { Link } from "@reach/router";
 // const ReactDOM = require("react-dom");
 const ReactMarkdown = require("react-markdown");
 
@@ -45,7 +46,10 @@ const BlogPost = ({ setPathname, id }) => (
       console.log(data.blogPost.heroImage.url);
       return (
         <div className="blogpost">
-          <p className="blogpost__type">{data.blogPost.type}</p>
+          <Link to={`/blog/${data.blogPost.type}`} className="link__dark">
+            <p className="blogpost__type">{data.blogPost.type}</p>
+          </Link>
+
           <h2 className="page__header">{data.blogPost.title}</h2>
           <h3 className="page__subheader">
             {data.blogPost.author === "Guest"
@@ -56,11 +60,15 @@ const BlogPost = ({ setPathname, id }) => (
 
           <ul className="blog__tags">
             {data.blogPost.tags.map((tag) => {
-              return <li className="blog__tag">{tag}</li>;
+              return (
+                <li key={tag} className="blog__tag">
+                  {tag}
+                </li>
+              );
             })}
           </ul>
 
-          <div className="page__content">
+          <div className="page__content blogpost__content">
             {<ReactMarkdown source={xmlString} escapeHtml={false} />}
           </div>
           {/* <div className="page__content">{doc}</div> */}

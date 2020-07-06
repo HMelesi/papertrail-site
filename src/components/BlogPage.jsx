@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Router, Link } from "@reach/router";
 import AllBlogList from "./AllBlogList";
 import TypeBlogList from "./TypeBlogList";
@@ -24,7 +24,7 @@ const BlogPage = ({ setPathname }) => (
 
       if (loading) return <Loading />;
       if (error) return <div>Error :(</div>;
-      console.dir(data);
+
       return (
         <div>
           <section>

@@ -3,6 +3,7 @@ import BlogCard from "./BlogCard";
 import Loading from "./Loading";
 import { gql } from "apollo-boost";
 import { Query } from "react-apollo";
+import Error from "./Error";
 
 const GET_POSTS = gql`
   query posts($type: Types!) {
@@ -24,8 +25,16 @@ const TypeBlogList = ({ setPathname, type }) => (
       setPathname("/blog");
 
       if (loading) return <Loading />;
-      if (error) return <div>Error :(</div>;
+      if (error) return <Error />;
 
+      if (data.blogPosts.length === 0)
+        return (
+          <div className="blog__list">
+            <h4 className="page__subheader">
+              There are no blogs of this type yet, check back soon!
+            </h4>
+          </div>
+        );
       return (
         <div>
           <ul className="blog__list">
