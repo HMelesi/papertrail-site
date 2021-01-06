@@ -10,7 +10,7 @@
     "apollo-boost": "^0.4.9",
     "apollo-client": "^2.6.10",
     "apollo-link-http": "^1.5.17",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "graphql": "^15.2.0",
     "graphql-tag": "^2.10.3",
     "prismic-javascript": "^3.0.0",
